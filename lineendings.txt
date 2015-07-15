@@ -1,0 +1,7 @@
+         Char    Octal
+Unix     \n      \012
+
+Mac      \r      \015
+
+Windows  \r\n    \015\012
+
