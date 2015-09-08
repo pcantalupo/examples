@@ -1,5 +1,7 @@
 rm(list=ls())
 
+set.seed(91)
+
 # 10 genes (rows) by 10 samples (columns)
 d = data.frame(matrix(rnorm(100),10,10))
 rownames(d) = c(LETTERS[1:10])
