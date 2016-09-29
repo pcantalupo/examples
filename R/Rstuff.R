@@ -91,6 +91,12 @@ table(n$Class,n$gene)
 transform(merge(df1,df2,by=0,all=TRUE), row.names=Row.names, Row.names=NULL)
 
 
+# Convert one row data frame to a named vector
+# see Roland's answer http://stackoverflow.com/questions/14484728/convert-a-row-of-a-data-frame-to-vector
+unlist(df[1,])
+
+
+
 # Statistical Testing
 # packages: gmodels (CrossTable function; see http://stackoverflow.com/questions/32651253/how-can-i-extract-error-percentage-from-a-crosstable-into-a-variable)
 
