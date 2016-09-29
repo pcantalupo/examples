@@ -86,6 +86,10 @@ n$Class = factor(n$Class, levels(n$Class)[c(5,2,3,4,1)])
 table(n$Class,n$gene)
 
 
+# How to merge dataframes without adding a “Row.names” column?
+# http://bit.ly/2dosHll
+transform(merge(df1,df2,by=0,all=TRUE), row.names=Row.names, Row.names=NULL)
+
 
 # Statistical Testing
 # packages: gmodels (CrossTable function; see http://stackoverflow.com/questions/32651253/how-can-i-extract-error-percentage-from-a-crosstable-into-a-variable)
