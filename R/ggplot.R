@@ -6,3 +6,6 @@ plots = lapply(names(mock), function(n) {
   g + ggtitle(paste0("Mock.",n))
 })
 grid.arrange(grobs = plots, ncol = 2)
+
+
+ggplot()
