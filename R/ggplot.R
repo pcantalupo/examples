@@ -1,4 +1,4 @@
-# Use 'gridExtra::grid.arrange' to place multiple ggplots in a plot
+# Use 'gridExtra::grid.arrange' to place multiple ggplots in a plot (ggplot)
 library(gridExtra)
 plots = lapply(names(mock), function(n) {
   g = TSNEPlot(mock[[n]], do.label = T, do.return = T)
