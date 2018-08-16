@@ -1,4 +1,7 @@
 # Linear regression example
+# Useful links https://rstudio-pubs-static.s3.amazonaws.com/65641_88a692252c6c4f2ab279d115e59e6767.html
+#              https://www.youtube.com/watch?v=ZkjP5RJLQF4&list=PLIeGtxpvyG-LoKUpV0fSY8BGKIMIdmfCi
+
 # Can think of weights as being gene expression values and height being number of UMI in the cells
 weight = c(137, 130, 154, 155, 160, 190)
 height = c(60, 65, 75, 80, 85, 90)
