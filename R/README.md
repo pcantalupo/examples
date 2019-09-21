@@ -1,12 +1,8 @@
 ## Switching R on Mac RStudio
 - See this [documentation](https://support.rstudio.com/hc/en-us/articles/200486138-Changing-R-versions-for-RStudio-desktop)
-- Basically you do the following:
-
-```
-cd /Library/Frameworks/R.framework/Versions/
-rm Current
-ln -s 3.5 Current   # create sym link to the version you want; then restart Rstudio
-```
+- Do not use `ln -s`; it is too trick to do properly
+- Best thing is to `Run the installer from CRAN for the R version you want to be current`
+- [Version 3.5.3](https://cran.r-project.org/bin/macosx/el-capitan/base/)
 
 ## Learning R
 - [swirl](https://swirlstats.com/)
