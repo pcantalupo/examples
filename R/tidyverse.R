@@ -8,3 +8,10 @@ igvjunctions = igvjunctions %>%
   mutate(welchintron = paste0(firstintron + 57, "-", lastintron + 57)) %>%
   select(depth, welchintron)
 
+
+
+
+# How do I spread multiple columns? Need to create a new variable with `unite`
+# Gather -> Unite -> Spread pipeline
+https://stackoverflow.com/questions/30592094/r-spreading-multiple-columns-with-tidyr
+
