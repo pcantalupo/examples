@@ -25,3 +25,41 @@ plot(model, which = 1)
 # After scaling the residuals, this shows that weight 137 (low weight or low expression) and weight 190 (high weight or expression) have high weight (expression) compared to everybody else. This is because we regressed out the effect of height (UMI) on the weights (expression)
 srw = scale(resid(model))
 plot(srw, weight)
+
+
+# Show summary of the model
+msum = summary(model)
+names(msum)
+msum
+
+# Get R^2 and Adj R^2
+msum$r.squared
+msum$adj.r.squared
+
+# Model p-value: If you want to obtain the p-value of the overall regression model use this function
+# from: https://stackoverflow.com/questions/5587676/pull-out-p-values-and-r-squared-from-a-linear-regression
+lmp <- function (modelobject) {
+  if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+  f <- summary(modelobject)$fstatistic
+  p <- pf(f[1],f[2],f[3],lower.tail=F)
+  attributes(p) <- NULL
+  return(p)
+}
+lmp(model)
+
+# In the case of a simple regression with one predictor, the model p-value and the p-value for the coefficient will be the same.
+
+# Coefficient p-values:
+# If you have more than one predictor, then the above will return the model p-value, and the p-value for coefficients can be extracted using:
+msum$coefficients[,4]  
+
+# Show R^2 and Pvalue on plot
+r2 = format(msum$adj.r.squared, digits = 3)
+myp = format(lmp(model), format ="e", digits = 2)
+plot(height, weight)
+abline(model)
+text(70, 170, labels = paste0("R2 = ", r2, " pval = ", myp))
+dev.off()
+
+
+
