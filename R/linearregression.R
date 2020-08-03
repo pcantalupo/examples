@@ -13,6 +13,10 @@ model = lm(weight~height, data=df)
 plot(height,weight)
 abline(model)
 
+# Plot the Model
+layout(matrix(c(1,2,3,4),2,2))
+plot(model, main = "Height by Weight")
+
 # The weight 137 person has a high residual (8.59)
 resid(model)
 plot(resid(model))
